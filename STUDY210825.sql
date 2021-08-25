@@ -83,3 +83,14 @@ CREATE USER user IDENTIFIED {BY password | EXTERNALLY}
   [PROFILE profile]
   [QUOTA {integer [K|M] | UNLIMITED} ON tablespace ]
   
+  DROP USER user01 [CASCADE];
+  
+  GRANT create session, create table TO user01 ; 
+REVOKE create session, create table FROM user01 ;
+
+GRANT select, insert On emp TO user01 ; 
+REVOKE select, insert On emp FROM user01 ;
+
+
+  
+  
